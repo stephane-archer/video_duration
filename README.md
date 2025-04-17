@@ -4,16 +4,12 @@ A Flutter package that provides a simple cross-platform utility to get the **dur
 
 Currently supports **Windows** and **macOS**. Contributions are welcome to extend support to **Linux**, **Android**, **iOS**, and **Web**!
 
----
-
 ## ✨ Features
 
 - Returns the **duration of a video** file.
 - Outputs a **double** value (e.g., `3.728` = 3 seconds and 728 milliseconds).
 - Works seamlessly on **Windows** and **macOS**.
 - Minimal, focused, and easy to integrate.
-
----
 
 ## 🔧 Installation
 
@@ -22,6 +18,10 @@ Add this to your `pubspec.yaml`:
 ```yaml
 dependencies:
   video_duration: ^<latest_version>
+```
+or type:
+```bash
+flutter pub add video_duration
 ```
 
 Then run:
