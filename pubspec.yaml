@@ -3,6 +3,10 @@ description: "A Flutter package that provides a simple cross-platform utility to
 version: 0.0.1
 repository: "https://github.com/stephane-archer/video_duration"
 
+platforms:
+  macos:
+  windows:
+
 environment:
   sdk: ^3.7.2
   flutter: ">=1.17.0"
@@ -21,7 +25,7 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
+# flutter:
 
   # To add assets to your package, add an assets section, like this:
   # assets:
