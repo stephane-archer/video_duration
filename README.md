@@ -43,8 +43,8 @@ void main() async {
 - ✅ macOS
 - ✅ Windows
 - ⏳ Linux (Help wanted!)
+- ✅ iOS
 - ⏳ Android (Help wanted!)
-- ⏳ iOS (Help wanted!)
 - ⏳ Web (Help wanted!)
 
 ## 🤝 Contributing
