@@ -1,8 +1,6 @@
 import 'dart:io';
 
-import 'package:ffmpeg_kit_flutter/ffprobe_kit.dart';
-import 'package:ffmpeg_kit_flutter/media_information.dart';
-import 'package:ffmpeg_kit_flutter/media_information_session.dart';
+import 'package:flutter_video_info/flutter_video_info.dart';
 import 'package:thumblr/thumblr.dart';
 
 /// Returns the duration of the video in seconds as a double.
@@ -23,19 +21,16 @@ Future<double> getVideoDuration(String videoPath) async {
 }
 
 Future<double> _getVideoDurationiOS(String videoPath) async {
-  MediaInformationSession mediaInformationSession =
-      await FFprobeKit.getMediaInformation(videoPath);
-  MediaInformation? mediaInformation =
-      mediaInformationSession.getMediaInformation();
-  if (mediaInformation == null) {
-    throw StateError("media information not found");
+  final videoInfo = FlutterVideoInfo();
+  var info = await videoInfo.getVideoInfo(videoPath);
+  if (info == null) {
+    throw StateError("video information not found");
   }
-  String? durationString = mediaInformation.getDuration();
-  if (durationString == null) {
-    throw StateError("duration not found");
+  final videoDuration = info.duration; // in millisecond
+  if (videoDuration == null) {
+    throw StateError("Video duration not found");
   }
-  final double seconds = double.parse(durationString);
-  return seconds;
+  return videoDuration / 1000; // in seconds
 }
 
 Future<double> _getVideoDurationMacAndWindows(String videoPath) async {
