@@ -1,6 +1,6 @@
 name: video_duration
 description: "A Flutter package that provides a simple cross-platform utility to get the duration of a video file in seconds"
-version: 0.0.2
+version: 0.0.3
 repository: "https://github.com/stephane-archer/video_duration"
 
 platforms:
